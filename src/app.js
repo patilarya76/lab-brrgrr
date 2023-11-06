@@ -47,6 +47,7 @@ function renderPatty() {
 
 function renderCheese() {
   //Trial 1 - Change the visibility of cheese based on state by manipulating the DOM
+
 }
 
 function renderTomatoes() {
@@ -87,3 +88,47 @@ document.querySelector(".btn-patty").onclick = function () {
 //Judgement 1
 //In the p element having price-details as the class, display the calculated
 //price based on ingredients
+function renderCheese() {
+  let cheese = document.querySelector("#cheese");
+  if (state.Cheese) {
+    cheese.style.display = "inherit";
+  } else {
+    cheese.style.display = "none";
+  }
+}
+
+// Function to update the visibility of Tomatoes based on state
+function renderTomatoes() {
+  let tomatoes = document.querySelector("#tomato");
+  if (state.Tomatoes) {
+    tomatoes.style.display = "inherit";
+  } else {
+    tomatoes.style.display = "none";
+  }
+}
+
+// Function to update the visibility of Onions based on state
+function renderOnions() {
+  let onions = document.querySelector("#onions");
+  if (state.Onions) {
+    onions.style.display = "inherit";
+  } else {
+    onions.style.display = "none";
+  }
+}
+
+// Function to update the visibility of Lettuce based on state
+function renderLettuce() {
+  let lettuce = document.querySelector("#lettuce");
+  if (state.Lettuce) {
+    lettuce.style.display = "inherit";
+  } else {
+    lettuce.style.display = "none";
+  }
+}
+
+// Event listener for the cheese button
+document.querySelector(".btn-cheese").onclick = function () {
+  state.Cheese = !state.Cheese;
+  renderAll();
+};
